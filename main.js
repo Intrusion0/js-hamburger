@@ -1,13 +1,13 @@
 //Hamburger menu: mostrare / nascondere il menu principale
 
 // Mostro il menu
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 const openMenu = document.querySelector(".header-right > a");
 
 openMenu.addEventListener("click",
 
     function(){
-        hamburgerMunu = document.querySelector(".hamburger-menu");
-        hamburgerMunu.style.display = "block";
+        hamburgerMenu.classList.add("active");
     }
 );
 
@@ -17,12 +17,6 @@ const closeMenu = document.querySelector(".close");
 closeMenu.addEventListener("click",
         
     function(){
-        hamburgerMunu = document.querySelector(".hamburger-menu");
-        hamburgerMunu.style.display = "none";
+        hamburgerMenu.classList.remove("active");
     }
 );
-
-// Chiudo il menu oltre i 1000px
-const closeMenuOTP = document.querySelector(".hamburger-menu");
-
-closeMenuOTP.style.display = "none";
